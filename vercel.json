@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/maps/",
+            "destination": "https://eleven28-second.vercel.app/index?name=galaxy"
+        },
+        {
+            "source": "/maps/:asset*",
+            "destination": "https://eleven28-second.vercel.app/:asset*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Galaxy.">
+	<main>
+		<h1>Welcome to <span class="text-gradient">Galaxy</span></h1>
+		<p class="instructions">
+			Helping organizations to make better decisions<br />
+			Knowledge Management System powered by <strong>Galactica AI</strong>
+		</p>
+		<h2 class="text-gradient">Telegram</h2>
+		<ul role="list" class="link-card-grid">
+			<Card href="https://t.me/galaxyfractals/" title="Fractals"
+				body="Join channel to subscribe for new community picks" />
+			<Card href="https://t.me/+jxMRGtsbdfBmYjMy/" title="Progressors"
+				body="Join group to create collaborative art" />
+		</ul>
+		<h2 class="text-gradient">Github</h2>
+		<ul role="list" class="link-card-grid">
+			<Card href="https://github.com/7flash/galaxydo" title="Galaxy Voting"
+				body="Galaxy has developed an experimental voting app for fractally meetings." />
+			<!-- <Card
+				href="https://github.com/7flash/galaxydo-eleven12"
+				title="App"
+				body="Frontend and some scripts."
+			/> -->
+			<Card href="https://github.com/paperswithcode/galai" title="Galactica AI"
+				body="Galaxy leverages Galactica AI to introduce contextual suggestions in user notes." />
+			<Card href="https://github.com/zsviczian/excalibrain" title="Excalibrain"
+				body="Galaxy takes inspiration from this Obsidian Plugin." />
+			<Card href="https://github.com/excalidraw/excalidraw" title="Excalidraw"
+				body="Galaxy using this canvas to render user notes." />
+
+			<Card href="https://github.com/db0/AI-Horde" title="Horde AI"
+				body="Galaxy leverages distributed image generation to create bookmarks for user notes." />
+			<Card href="https://github.com/chiselstrike/chiselstrike" title="Chiselstrike"
+				body="Galaxy saves all created elements on the canvas into database" />
+		</ul>
+		<h2 class="text-gradient">Youtube</h2>
+		<ul role="list" class="link-card-grid">
+			<Card href="https://www.youtube.com/watch?v=28j51trtJMk" title="Code Maps"
+				body="Galaxy can be used for coding collaboration." />
+			<Card href="https://www.youtube.com/watch?v=En_2T7KH6RA" title="Xanadu Space"
+				body="Xanadu Space shows the concept of Stretch Text." />
+			<Card href="https://www.youtube.com/watch?v=8Y7_gvmMyKY" title="Galaxy Browser"
+				body="Galaxy can be used to browse internet in Stretch Text instead of Hyper Text." />
+			<Card href="https://www.youtube.com/watch?v=iE2A95HXP4Y" title="Lessons"
+				body="Interwingularity The concept of complexity in interconnectedness of human Knowledge. (Ted Nelson lessons)" />
+
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
